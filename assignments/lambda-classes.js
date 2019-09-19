@@ -22,6 +22,7 @@ class Person  {
 
 class Instructors extends Person {
     constructor(instructorAttributes){
+        super(instructorAttributes)
         //instructor receives specialty favlanguage and catchphrase as props
         this.specialty = instructorAttributes.specialty;
         this.favLanguage = instructorAttributes.favLanguage;
@@ -36,8 +37,14 @@ class Instructors extends Person {
     }//closes grade
 }// closes instructors
 
+//student class below
+class Students extends person {
+    constructor(studentAttributes){
 
+        //student receives previousbackground, classname, favsubjects
 
+    }//closes constructor
+}//closes student
 
 
 
