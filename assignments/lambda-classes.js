@@ -1,6 +1,6 @@
 // CODE here for your Lambda Classes
 //base class Person below
-class Person = {
+class Person  {
     constructor(personAttributes){
         //person receives name age and location as props
         this.name = personAttributes.name;
@@ -10,7 +10,45 @@ class Person = {
     //methods go here
     //speak method below
     speak(){
-        return `Hello my name is ${this.name}, I am from Bedrock`
+        return `Hello my name is ${this.name}, I am from Bedrock`;
     }
 
 }// closes person
+
+
+
+
+//need to extend both students and instructors so lets start w the latter
+
+class Instructors extends Person {
+    constructor(instructorAttributes){
+        //instructor receives specialty favlanguage and catchphrase as props
+        this.specialty = instructorAttributes.specialty;
+        this.favLanguage = instructorAttributes.favLanguage;
+        this.catchPhrase = instructorAttributes.catchPhrase;
+    }
+    //methods go here
+    demo(subject){
+        return `Today we are learning about ${subject}`;
+    }// closes demo
+    grade(student, subject){
+        return `${student.name} receives a perfect score on {subject}`;
+    }//closes grade
+}// closes instructors
+
+
+
+
+
+
+
+
+
+
+
+
+/////////// Questions As I go //////////////
+
+/*
+1. in the Instructors class, when you look at the methods, would we console.log demo(subject) or return? What is the difference really
+*/
